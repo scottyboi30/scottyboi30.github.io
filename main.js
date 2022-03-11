@@ -17,52 +17,20 @@ let hubConnectStatus = false;
 // ---------------------------------------------------------------------------------------------------------------------------------------------
 
 // Get config URL parameters
-// $(() => {
-//     isRegistered = localStorage.getItem("isRegistered");
-//     var params = {};
-//     if (location.href.includes("?")) {
-//         location.href.split("?")[1].split("&").forEach((i) => {
-//             params[i.split("=")[0].toLocaleLowerCase()] = i.split("=")[1];
-//         });
-//         if ('ip' in params && 'port' in params && 'clientid' in params) {
-//             serverIp = params.ip;
-//             serverPort = params.port;
-//             clientId = parseInt(params.clientid);
-
-//             // Show client id
-//             $("#client").html(clientId);
-
-//             // Landscape for tablets
-//             const os = getOs();
-//             if (os === 'Mac' || os === 'Windows')
-//                 $('.rotate-message').remove();
-
-//             // Load web fonts and initialise clock canvas
-//             document.fonts.ready.then(() => {
-//                 // Load hub proxy and initialise SignalR
-//                 $.getScript(`http://${serverIp}:${serverPort}/MessageHub/hubs`, () => init());
-//             });
-
-//             // Add logo tap detection
-//             $("#logo").on("mouseup touchend", (e) => {
-//                 console.log("Hit");
-//                 logoTouches++;
-//                 if (logoTouches >= maxLogoTouches)
-//                     refreshConnection(false, true); // Reload and reset client ID
-
-//                 // Reset logo touches after a few seconds
-//                 clearTimeout(logoTouchTimer);
-//                 logoTouchTimer = setTimeout(() => { logoTouches = 0; }, 3000);
-//             });
-//         } else {
-//             // Missing configuration
-//             displayError("Missing Configuration");
-//         }
-//     } else {
-//         // Missing configuration
-//         displayError("Missing Configuration");
-//     }
-// });
+$(() => {
+    selectionsAllowed = 8;
+            // Load web fonts and initialise clock canvas
+            document.fonts.ready.then(() => {
+                // Load hub proxy and initialise SignalR
+                $("button").on("touchstart mousedown", (e) => {
+                    e.preventDefault();
+    
+                    const choice = parseInt($(e.currentTarget).attr("data-id"));
+                    const state = parseInt($(e.currentTarget).attr("data-state"));
+                    toggleSingleButtonPress(e, choice, state);
+                });
+            });
+});
 
 refreshConnection = () => {
     localStorage.setItem("isRegistered", '');
