@@ -5,7 +5,6 @@ html {
 }
 
 body {
-  background: linear-gradient(rgba(42,25,60), rgba(100,25,65), rgba(42,25,60));
   background:rgba(42,25,60);
   color: white;
   font-family: "Myriad Pro Regular";
@@ -47,7 +46,6 @@ p {
 }
 
 #layoutContent {
-  background: linear-gradient(rgba(42,25,60), rgba(100,25,65), rgba(42,25,60));
   background: rgba(42,25,60);
   height: 100%;
   display: flex;
@@ -77,7 +75,7 @@ p {
 }
 
 #layoutContent .button.lockin-button .active {
-  background: linear-gradient(rgb(255, 154, 63), rgb(243, 172, 109), rgb(255, 154, 63));
+  /* background: linear-gradient(rgb(255, 154, 63), rgb(243, 172, 109), rgb(255, 154, 63)); */
   background: rgb(255, 154, 63);
   color: black;
   border-color: #161616;
@@ -139,10 +137,10 @@ p {
   text-align: center;
 }
 
-#layoutContent .avatar {
+/* #layoutContent .avatar {
   height: 100%;
   width: auto;
-}
+} */
 
 #layoutContent .button-content {
   display: flex;
@@ -170,7 +168,7 @@ p {
 }
 
 #layoutContent .button button.locked {
-  background: rgb(3, 3, 3);
+  background-color: rgb(3, 3, 3);
   border-color: rgb(0, 0, 0);
 }
 
@@ -186,7 +184,7 @@ p {
 }
 
 #buttonContent .button button {
-  background: linear-gradient(rgb(25, 19, 136), rgb(71, 65, 182), rgb(25, 19, 136));
+  /* background: linear-gradient(rgb(25, 19, 136), rgb(71, 65, 182), rgb(25, 19, 136)); */
   background: rgb(25, 19, 136);
   color: whitesmoke;
   text-align: left;
@@ -231,8 +229,8 @@ p {
   height: -webkit-fill-available;
 }
 
-#buttonContent.twoCol .avatar {
-  height: 100%;
+#buttonContent.fourCol .avatar {
+  height: 6rem;
   width: auto;
 }
 
@@ -261,7 +259,7 @@ p {
 #buttonContent.twoCol .button-text-name,
 #buttonContent .pairs .button-text-name,
 #buttonContent .contestant-row .button-text-name  {
-  background: #252f72f0;
+  background-color: #252f72f0;
   padding: 0 0.5rem;
 }
 
