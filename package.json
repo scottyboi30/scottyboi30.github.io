@@ -1,0 +1,16 @@
+{
+  "name": "signalr-jstest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "chat.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "signalr": "^2.4.2",
+    "sweetalert": "^2.1.2"
+  }
+}

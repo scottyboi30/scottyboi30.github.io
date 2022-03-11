@@ -1,0 +1,146 @@
+<html>
+
+<head>
+    <title>SignalR Client</title>
+    <link rel="stylesheet" type="text/css" href="fonts/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="show.css" />
+
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no, shrink-to-fit=no" />
+    <meta name="apple-mobile-web-app-title" content="DWM" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="apple-touch-icon" href="images/logo-icon.png" />
+</head>
+
+<body>
+    <img id="logo" class="logo" src="images/DWM-dim-logo.png">
+    <div class="rotate-message">
+        <p>
+            <img src="images/rotate-icon.svg" />
+            Please rotate your device
+        </p>
+    </div>
+    <div id="layout" style="display: block;">
+        <div id="layoutContent">
+            <div id="roundText">Select your top 8 contestants!</div>
+            <div id="buttonContent" class="fourCol">
+                <div class="button"><button data-index="1" data-state="0" data-id="1">
+                        <div class="button-content"><img src="images\face1.png" class="avatar">
+                            <div class="button-text"><span class="button-text-name">Louis Lyle</span></div>
+                        </div>
+                    </button></div>
+                <div class="button"><button data-index="2" data-state="0" data-id="2">
+                        <div class="button-content"><img src="images\face2.png" class="avatar">
+                            <div class="button-text"><span class="button-text-name">Sammi Mushtaq</span></div>
+                        </div>
+                    </button></div>
+                <div class="button"><button data-index="3" data-state="0" data-id="3">
+                        <div class="button-content"><img src="images\face3.png" class="avatar">
+                            <div class="button-text"><span class="button-text-name">Arthur Ryan</span></div>
+                        </div>
+                    </button></div>
+                <div class="button"><button data-index="4" data-state="0" data-id="4">
+                        <div class="button-content"><img src="images\face4.png" class="avatar">
+                            <div class="button-text"><span class="button-text-name">Scott Archer</span></div>
+                        </div>
+                    </button></div>
+                <div class="button"><button data-index="5" data-state="0" data-id="5">
+                        <div class="button-content"><img src="images\face5.png" class="avatar">
+                            <div class="button-text"><span class="button-text-name">Adnan Pagdawala</span></div>
+                        </div>
+                    </button></div>
+                <div class="button"><button data-index="6" data-state="0" data-id="6">
+                        <div class="button-content"><img src="images\face6.png" class="avatar">
+                            <div class="button-text"><span class="button-text-name">Nat Ryan</span></div>
+                        </div>
+                    </button></div>
+                <div class="button"><button data-index="7" data-state="0" data-id="7">
+                        <div class="button-content"><img src="images\face7.png" class="avatar">
+                            <div class="button-text"><span class="button-text-name">Harvey Lobban</span></div>
+                        </div>
+                    </button></div>
+                <div class="button"><button data-index="8" data-state="0" data-id="8">
+                        <div class="button-content"><img src="images\face8.png" class="avatar">
+                            <div class="button-text"><span class="button-text-name">Chris Sears</span></div>
+                        </div>
+                    </button></div>
+                <div class="button"><button data-index="9" data-state="0" data-id="9">
+                        <div class="button-content"><img src="images\face9.png" class="avatar">
+                            <div class="button-text"><span class="button-text-name">Dan Ryan</span></div>
+                        </div>
+                    </button></div>
+                <div class="button"><button data-index="10" data-state="0" data-id="10">
+                        <div class="button-content"><img src="images\face10.png" class="avatar">
+                            <div class="button-text"><span class="button-text-name">Emma Ryan</span></div>
+                        </div>
+                    </button></div>
+                <div class="button"><button data-index="11" data-state="0" data-id="11">
+                        <div class="button-content"><img src="images\face11.png" class="avatar">
+                            <div class="button-text"><span class="button-text-name">Kenni Ali</span></div>
+                        </div>
+                    </button></div>
+                <div class="button"><button data-index="12" data-state="0" data-id="12">
+                        <div class="button-content"><img src="images\face12.png" class="avatar">
+                            <div class="button-text"><span class="button-text-name">Blake Blakington</span></div>
+                        </div>
+                    </button></div>
+            </div>
+            <div class="button lockin-button"><button class="inactive">
+                    <div class="lockin-button-text">LOCK IN</div>
+                </button></div>
+        </div>
+    </div>
+    <div id="registration" class="registration d-none">
+        <div class="form">
+            <div class="form__group">
+                <div>
+                    <label for="name" class="form__label">Seat Number</label>
+                    <input type="number" class="form__input form__input--disabled" placeholder="Required"
+                        id="seatNumber">
+                </div>
+
+                <div class="form__register-seat">
+                    <button id="registerSeat" type="button" class="btn">Register Seat</button>
+                </div>
+            </div>
+            <div id="details" class="details d-none">
+                <div class="form__group ">
+                    <label for="name" class="form__label">First Name</label>
+                    <input type="text" class="form__input" placeholder="Required" id="firstName">
+                </div>
+                <div class="form__group">
+                    <label for="name" class="form__label">Last Name</label>
+                    <input type="text" class="form__input" placeholder="Required" id="lastName">
+                </div>
+                <div class="form__register-btns">
+                    <div class="form__button-wrapper">
+                        <button id="cancelRegistration" type="button" class="btn">Cancel</button>
+                    </div>
+                    <div class="form__button-wrapper">
+                        <button id="registerUser" type="button" class="btn">Register</button>
+                    </div>
+                </div>
+                <div id="nameInvalid" class="details__validation d-none">
+                    <p>Please enter both a first and last name.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="loader-wrapper">
+        <div class="loader">Loading...</div>
+    </div>
+    <div id="lock"></div>
+    <div id="modal"></div>
+
+    <div id="status"></div>
+    <div id="client">0</div>
+
+    <script src="jquery.js"></script>
+    <script src="signalr.js"></script>
+    <script src="sweetalert.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
