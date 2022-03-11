@@ -48,7 +48,7 @@ p {
 
 #layoutContent {
   background: linear-gradient(rgba(42,25,60), rgba(100,25,65), rgba(42,25,60));
-  background: rgba(42,25,60)
+  background: rgba(42,25,60);
   height: 100%;
   display: flex;
   flex-direction: column;
