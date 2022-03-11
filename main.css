@@ -6,6 +6,7 @@ html {
 
 body {
   background: linear-gradient(rgba(42,25,60), rgba(100,25,65), rgba(42,25,60));
+  background:rgba(42,25,60);
   color: white;
   font-family: "Myriad Pro Regular";
   font-size: 12px;
@@ -47,6 +48,7 @@ p {
 
 #layoutContent {
   background: linear-gradient(rgba(42,25,60), rgba(100,25,65), rgba(42,25,60));
+  background: rgba(42,25,60)
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -75,7 +77,8 @@ p {
 }
 
 #layoutContent .button.lockin-button .active {
-  background: #ff9a3f; background: linear-gradient(rgb(255, 154, 63), rgb(243, 172, 109), rgb(255, 154, 63));
+  background: linear-gradient(rgb(255, 154, 63), rgb(243, 172, 109), rgb(255, 154, 63));
+  background: rgb(255, 154, 63);
   color: black;
   border-color: #161616;
   animation: pulsate 2s infinite;
@@ -184,6 +187,7 @@ p {
 
 #buttonContent .button button {
   background: linear-gradient(rgb(25, 19, 136), rgb(71, 65, 182), rgb(25, 19, 136));
+  background: rgb(25, 19, 136);
   color: whitesmoke;
   text-align: left;
   text-shadow: black;
